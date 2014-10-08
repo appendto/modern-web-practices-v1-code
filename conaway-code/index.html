@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+        <title>Data Bindin: appendTo eBook</title>
+        <link href="styles.css" rel="stylesheet">
+	</head>
+	<body>
+        <header>
+            <h1 class="float-left">Client Side Data Binding</h1>
+            <img src="assets/logo.svg" class="float-right">
+            <div class="clear-both"></div>
+        </header>
+        <div class="header-margin"></div>
+        <section id="input-area" class="clear-both">
+            <h2 class="red">User Input</h2>
+            <form name='registerForm'>
+                <label>Name:</label>
+                    <input type='text' name='name' data-bind='newUser.name'>
+
+                <label>Email:</label>
+                    <input type='text' name='email' data-bind='newUser.email'>
+
+                <label>Phone:</label>
+                    <input type='text' name='phone' data-bind='newUser.phone'>
+
+                <label>Choose a Value:</label>
+                <select name="selectValue" data-bind='newUser.selectValue'>
+                    <option value='1'>Value 1</option>
+                    <option value='2'>Value 2</option>
+                </select>
+            </form>
+        </section>
+        <section id="server-input">
+            <h2 class="red">Server Mimic Input</h2>
+            <form name='serverMimicForm' id="serverMimicForm">
+                <label>Name:</label>
+                    <input type='text' name='name'>
+
+                <label>Email:</label>
+                    <input type='text' name='email'>
+
+                <label>Phone:</label>
+                    <input type='text' name='phone'>
+
+                <label>Choose a Value:</label>
+                <select name="selectValue">
+                    <option value='1'>Value 1</option>
+                    <option value='2'>Value 2</option>
+                </select>
+                <input type="submit" name="subServerMimic" for="serverMimicForm">
+            </form>
+        </section>
+		      
+		<section id="output-area">
+            <h2 class="red">Output</h2>
+            <div>
+                <p><span class="bold italic">newUser.name: </span><span class="large pre"><%=newUser.name%></span></p>
+                <p><span class="bold italic">newUser.email: </span><span class="large pre"><%=newUser.email%></span></p>
+                <p><span class="bold italic">newUser.phone: </span><span class="large pre"><%=newUser.phone%></span></p>
+                <p><span class="bold italic">newUser.selectValue: </span><span class="large pre"><%=newUser.selectValue%></span></p>
+            </div>
+        </section>
+       
+        <section id="log-area">
+            <h2 class="red">Method Trigger Log <button id="resetLog">Clear Log</button></h2>
+            <ul id="method-trigger-log"></ul>
+        </section>
+        
+		<script type="application/javascript" src="lodash.js"></script>
+        <script type="application/javascript" src="data-bind.js"></script>
+	</body>
+</html>

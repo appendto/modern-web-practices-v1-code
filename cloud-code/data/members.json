@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Darth Hildenbrand",
+    "role": "master"
+  },
+  {
+    "id": 2,
+    "name": "Darth Headrick",
+    "role": "master"
+  },
+  {
+    "id": 3,
+    "name": "Darth Vickers",
+    "role": "master"
+  },
+  {
+    "id": 4,
+    "name": "Darth Walters",
+    "role": "master"
+  },
+  {
+    "id": 5,
+    "name": "Apprentice Bushnell",
+    "role": "apprentice"
+  },
+  {
+    "id": 6,
+    "name": "Apprentice Cadenhead",
+    "role": "apprentice"
+  },
+  {
+    "id": 7,
+    "name": "Apprentice Cloud",
+    "role": "apprentice"
+  },
+  {
+    "id": 8,
+    "name": "Apprentice Conaway",
+    "role": "apprentice"
+  },
+  {
+    "id": 9,
+    "name": "Apprentice Creamer",
+    "role": "apprentice"
+  },
+  {
+    "id": 10,
+    "name": "Apprentice Hetzel",
+    "role": "apprentice"
+  },
+  {
+    "id": 11,
+    "name": "Apprentice Kasper",
+    "role": "apprentice"
+  },
+  {
+    "id": 12,
+    "name": "Apprentice Lopes",
+    "role": "apprentice"
+  },
+  {
+    "id": 13,
+    "name": "Apprentice Mullens",
+    "role": "apprentice"
+  },
+  {
+    "id": 14,
+    "name": "Apprentice Niemeyer",
+    "role": "apprentice"
+  },
+  {
+    "id": 15,
+    "name": "Apprentice Waller",
+    "role": "apprentice"
+  },
+  {
+    "id": 16,
+    "name": "Apprentice Yexley",
+    "role": "apprentice"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name": "cloud-offline-app-examples",
+  "version": "1.0.0",
+  "author": "Nicholas Cloud <ncloud@appendto.com>",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "mach": "^0.11.0"
+  }
+}

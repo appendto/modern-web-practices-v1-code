@@ -1,0 +1,94 @@
+<!doctype html>
+<html manifest="manifest.appcache">
+	<head>
+		<title>Sith Apprenticeship Program (SAP)</title>
+		<link rel="stylesheet" type="text/css" href="/styles/app.css" />
+
+		<!-- templates -->
+		<script id="assigned-row-template" type="x-template">
+			<tr data-index="${ index }">
+				<td>${ masterName }</td>
+				<td>${ apprenticeName }</td>
+				<td><button class="unassign-apprentice" data-index="${ index }">Unassign</button></td>
+			</tr>
+		</script>
+
+		<script id="select-option-template" type="x-template">
+			<option data-index="${ index }" value="${ value }">${ text }</option>
+		</script>
+
+		<script id="message-template" type="x-template">
+			<p class="${ type }-message app-message">${ text }</p>
+		</script>
+
+	</head>
+	<body>
+		<section id="app-messages"></section>
+
+		<section class="body">
+			<header>
+				<h1 class="banner">Sith Apprenticeship Program (SAP)</h1>
+				<blockquote cite="http://starwars.wikia.com/wiki/Rule_of_Two">
+					"This is the Rule of Two: one Master and one apprentice." -- Darth Bane
+				</blockquote>
+			</header>
+
+			<section id="available-masters" class="column">
+				<h2>Available Masters</h2>
+				<select id="masters"></select>
+			</section>
+
+			<section id="available-apprentices" class="column">
+				<h2>Available Apprentices</h2>
+				<select id="apprentices"></select>
+				<button id="assign-apprentice">Assign</button>
+				<button id="promote-apprentice">Promote</button>
+			</section>
+
+			<section id="assigned-apprentices">
+				<h2>Assigned Apprentices</h2>
+				<table id="assignments">
+					<thead>
+						<tr>
+							<th>Master</th>
+							<th>Apprentice</th>
+							<th>Options</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</section>
+		</section>
+
+		<footer>
+			&copy; 2014 Evil Galactic Empire, Inc.
+		</footer>
+
+		<!-- libs -->
+		<script src="/scripts/vendor/jquery.js"></script>
+		<script src="/scripts/vendor/lodash.js"></script>
+		<script src="/scripts/vendor/async.js"></script>
+		<script src="/scripts/vendor/ventage.js"></script>
+		<script src="/scripts/vendor/nonet.js"></script>
+		<script>
+			(function () {
+				// set up the global app object
+				window.app = {};
+				window.app.storage = window.localStorage;
+				window.app.alert = window.alert;
+				var net = window.app.net = new Nonet();
+				net.poll('http://localhost:3000/api/heartbeat', 3000, true);
+				net.on('offline', function (args) {
+					if (args.delta) {
+						console.warn('application is offline');
+					}
+				});
+			}());
+		</script>
+
+		<!-- app scripts -->
+		<script src="/scripts/data.js"></script>
+		<script src="/scripts/state.js"></script>
+		<script src="/scripts/ui.js"></script>
+	</body>
+</html>
